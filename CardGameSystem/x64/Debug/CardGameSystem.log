@@ -1,0 +1,11 @@
+﻿  CardGameSystem.cpp
+C:\Users\matte\Downloads\lab 4\Lab04\CardGameSystem\CardGameSystem.cpp(36,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\matte\Downloads\lab 4\Lab04\CardGameSystem\CardGameSystem.cpp(189,32): warning C4305: '=': truncation from 'int' to 'char'
+C:\Users\matte\Downloads\lab 4\Lab04\CardGameSystem\CardGameSystem.cpp(189,32): warning C4309: '=': truncation of constant value
+C:\Users\matte\Downloads\lab 4\Lab04\CardGameSystem\CardGameSystem.cpp(192,32): warning C4305: '=': truncation from 'int' to 'char'
+C:\Users\matte\Downloads\lab 4\Lab04\CardGameSystem\CardGameSystem.cpp(192,32): warning C4309: '=': truncation of constant value
+C:\Users\matte\Downloads\lab 4\Lab04\CardGameSystem\CardGameSystem.cpp(195,32): warning C4305: '=': truncation from 'int' to 'char'
+C:\Users\matte\Downloads\lab 4\Lab04\CardGameSystem\CardGameSystem.cpp(195,32): warning C4309: '=': truncation of constant value
+C:\Users\matte\Downloads\lab 4\Lab04\CardGameSystem\CardGameSystem.cpp(198,32): warning C4305: '=': truncation from 'int' to 'char'
+C:\Users\matte\Downloads\lab 4\Lab04\CardGameSystem\CardGameSystem.cpp(198,32): warning C4309: '=': truncation of constant value
+  CardGameSystem.vcxproj -> C:\Users\matte\Downloads\lab 4\Lab04\x64\Debug\CardGameSystem.exe
