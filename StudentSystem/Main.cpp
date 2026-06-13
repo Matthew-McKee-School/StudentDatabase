@@ -2,37 +2,48 @@
 
 int main()
 {
-    srand(time(0));
     int count = 0;
     double grades[MAX_STUDENTS][NUM_ASSIGNMENTS];
     Student students[MAX_STUDENTS];
     int menu_choice;
 
     loadStudents(students, count);
-    generateGrades(grades, count);
-    CalculateAverages(grades, students, count);
     do {
-        cout << "1. Display all student info \n2. Update assignment \n3. Add student \n4. Save to file \n5. Highlight student / assignment \n6. Exit\n\n";
+        cout << "1. Display all students \n2. Search by course \n3. Assignment average \n4. Hardest assignment \n5. Course enrollment \n6. Sort by average \n7. Add student \n8. At risk students \n9. Save students \n10. Exit \n\n";
+        
+        cout << "Which of the above menu options would you like to do: ";
         cin >> menu_choice;
         switch (menu_choice) {
         case 1:
-            displayAllStudentInfo(grades, students, count);
+            displayStudents(students, count);
             break;
         case 2:
-            updateAssignment(grades, students, count);
+            searchByCourse(students, count);
             break;
         case 3:
-            addStudent(students, count, grades);
+            showAssignmentAverage(students, count);
             break;
         case 4:
-            saveStudents(students, count);
+            showHardestAssignment(students, count);
             break;
         case 5:
-            highlightSearch(grades, students, count);
+            courseEnrollment(students, count);
             break;
         case 6:
-            cout << "Bye!";
+            sortByAverage(students, count);
+            break;
+        case 7:
+            addStudent(students, count);
+            break;
+        case 8:
+            atRiskStudents(students, count);
+            break;
+        case 9:
+            saveStudents(students, count);
+            break;
+        case 10:
+            cout << "Bye";
             break;
         }
-    } while (menu_choice != 6);
+    } while (menu_choice != 10);
 }
