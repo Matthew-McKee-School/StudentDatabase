@@ -1,41 +1,49 @@
 #pragma once
 
-#include <iostream>
-#include <fstream>
-#include <cstdlib>
-#include <ctime>
 #include <string>
-
 using namespace std;
 
-//Struct
-struct Student {
+// ================= CONSTANTS =================
+const int STUDENT_MAX = 100;
+const int NUM_ASSIGNMENTS = 5;
+const int NUM_COURSES = 3;
+
+// ================= STRUCT =================
+struct Student
+{
     string firstName;
     string lastName;
-    int id;
-    double grade;
-    int grades[5];
-    string courses[3];
+    int id; // Note: Kept as int to match your Lab 6 precisely
+
+    double assignments[NUM_ASSIGNMENTS];
+    double average;
+
+    string courses[NUM_COURSES];
 };
 
-//Constants
-const int MAX_STUDENTS = 100;
-const int NUM_ASSIGNMENTS = 5;
+// ================= LINKED LIST NODE =================
+struct StudentNode
+{
+    Student data;         // Original struct used as cargo
+    StudentNode* next;    // Link to the next student
+};
 
-//Function prototypes
-void loadStudents(Student students[], int& count);
+// ================= FUNCTION PROTOTYPES =================
+void loadStudents(StudentNode*& head);
+void displayStudents(StudentNode* head);
 
-void CalculateAverages(Student* s, int count);
+//void calculateAverage(Student* s);
+void calculateAllAverages(StudentNode* head);
 
-void addStudent(Student students[], int& count);
-void saveStudents(Student students[], int count);
+void searchByCourse(StudentNode* head);
+void showAssignmentAverage(StudentNode* head);
+void showHardestAssignment(StudentNode* head);
+void courseEnrollment(StudentNode* head);
 
-void displayStudents(Student students[], int count);
+void sortByAverage(StudentNode* head);
 
-void searchByCourse(Student students[], int count);
-void showAssignmentAverage(Student students[], int count);
-void showHardestAssignment(Student students[], int count);
-void courseEnrollment(Student students[], int count);
-void atRiskStudents(Student students[], int count);
+void addStudent(StudentNode*& head);
+void atRiskStudents(StudentNode* head);
+void saveStudents(StudentNode* head);
 
-void sortByAverage(Student students[], int count);
+void deleteList(StudentNode*& head); // New cleanup function requirement
